@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/epop.iml" filepath="$PROJECT_DIR$/epop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/epop-model/epop-model.iml" filepath="$PROJECT_DIR$/epop-model/epop-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/epop-service/epop-service.iml" filepath="$PROJECT_DIR$/epop-service/epop-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/epop-web/epop-web.iml" filepath="$PROJECT_DIR$/epop-web/epop-web.iml" />
+    </modules>
+  </component>
+</project>
