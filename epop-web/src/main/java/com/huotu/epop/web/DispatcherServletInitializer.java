@@ -1,6 +1,7 @@
 package com.huotu.epop.web;
 
 import com.huotu.epop.web.config.CoreConfig;
+import com.huotu.epop.web.config.MVCConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
@@ -10,13 +11,13 @@ public class DispatcherServletInitializer extends AbstractAnnotationConfigDispat
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class<?>[]{
-                CoreConfig.class
+                CoreConfig.class, MVCConfig.class
         };
     }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class<?>[0];
+        return null;
     }
 
     @Override

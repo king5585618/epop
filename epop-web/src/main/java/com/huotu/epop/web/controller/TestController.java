@@ -14,7 +14,8 @@ public class TestController {
     private static final Log log = LogFactory.getLog(TestController.class);
 
     @RequestMapping(value = "/test",method = RequestMethod.GET)
-    public void test(){
+    public String test(){
         log.info("test");
+        return "/index";
     }
 }
