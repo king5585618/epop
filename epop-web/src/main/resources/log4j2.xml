@@ -38,18 +38,18 @@
         <!--<logger name="com.huotu.epop.web.controller.TestController" level="trace" additivity="false">-->
             <!--<appender-ref ref="Console"/>-->
         <!--</logger>-->
-        <logger name="org.springframework.security">
-            <level value="${log4j.org.springframework.security}"/>
-        </logger>
-        <logger name="org.springframework.transaction">
-            <level value="${log4j.org.springframework.transaction}"/>
-        </logger>
-        <logger name="org.springframework.data">
-            <level value="${log4j.org.springframework.data}"/>
-        </logger>
-        <logger name="org.springframework.web">
-            <level value="${log4j.org.springframework.web}"/>
-        </logger>
+        <!--<logger name="org.springframework.security">-->
+            <!--<level value="${log4j.org.springframework.security}"/>-->
+        <!--</logger>-->
+        <!--<logger name="org.springframework.transaction">-->
+            <!--<level value="${log4j.org.springframework.transaction}"/>-->
+        <!--</logger>-->
+        <!--<logger name="org.springframework.data">-->
+            <!--<level value="${log4j.org.springframework.data}"/>-->
+        <!--</logger>-->
+        <!--<logger name="org.springframework.web">-->
+            <!--<level value="${log4j.org.springframework.web}"/>-->
+        <!--</logger>-->
         <root level="info">
             <!--appender-ref引用的值是上面每个appender的name，而不是节点名称-->
             <appender-ref ref="Console"/>
