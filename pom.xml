@@ -9,6 +9,7 @@
         <module>epop-web</module>
         <module>epop-service</module>
         <module>epop-model</module>
+        <module>epop-test</module>
     </modules>
     <name>epop project</name>
     <url>http://maven.apache.org</url>
