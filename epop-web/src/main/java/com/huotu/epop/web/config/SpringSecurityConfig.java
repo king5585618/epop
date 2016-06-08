@@ -31,13 +31,13 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/login");
+//        web.ignoring().antMatchers("/login");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 //        自带的登录界面
-        http.authorizeRequests().anyRequest().authenticated().and().formLogin().and().httpBasic();
+//        http.authorizeRequests().anyRequest().authenticated().and().formLogin().and().httpBasic();
 //        http.authorizeRequests().anyRequest().authenticated().and().formLogin().loginPage("/login").permitAll();
 
 //        没有权限则跳转到异常页

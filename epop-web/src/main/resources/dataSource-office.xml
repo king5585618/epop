@@ -15,10 +15,10 @@
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="net.sourceforge.jtds.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://120.24.243.104:3307/epop?useUnicode=true&amp;characterEncoding=UTF8"/>
-        <property name="username" value="hotdev"/>
-        <property name="password" value="hot@1234"/>
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/epop?useUnicode=true&amp;characterEncoding=UTF8"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
 
     </bean>
 
@@ -26,15 +26,10 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="packagesToScan">
             <array>
-                <value>com.huotu.huobanplus.notice.entity</value>
-                <value>com.huotu.huobanplus.model.entity</value>
-                <value>com.huotu.huobanplus.common.entity</value>
-                <value>com.huotu.huobanplus.base.entity</value>
-                <value>com.huotu.huobanplus.smartui.entity</value>
-                <value>com.huotu.huobanplus.sis.model.entity</value>
+                <value>com.huotu.epop.model.entity</value>
             </array>
         </property>
-        <property name="persistenceProvider">
+        <property name="persistenceProvider" >
             <bean class="org.eclipse.persistence.jpa.PersistenceProvider"/>
         </property>
         <property name="jpaDialect">
@@ -45,8 +40,6 @@
             <map>
                 <entry key="javax.persistence.schema-generation.database.action" value="create"/>
                 <entry key="eclipselink.logging.level" value="FINE"/>
-                <entry key="eclipselink.logging.logger"
-                       value="org.eclipse.persistence.logging.CommonsLoggingLog"/>
                 <entry key="eclipselink.weaving" value="false"/>
             </map>
         </property>

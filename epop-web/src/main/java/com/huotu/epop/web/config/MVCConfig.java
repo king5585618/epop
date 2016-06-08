@@ -17,6 +17,7 @@ import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
  */
 @Configuration
 @EnableWebMvc
+//@EnableAspectJAutoProxy
 public class MVCConfig extends WebMvcConfigurerAdapter {
 
     @Autowired
