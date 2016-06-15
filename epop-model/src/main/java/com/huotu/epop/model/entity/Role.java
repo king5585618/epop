@@ -16,25 +16,19 @@ import javax.persistence.*;
 import java.util.List;
 
 /**
- * Created by jinzj on 2016/6/8.
+ * Created by jinzj on 2016/6/15.
  */
 @Entity
-@Table(name = "User")
 @Getter
 @Setter
-public class User {
-
+@Table(name = "Role")
+public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String userName;
-
-    private String realName;
-
-    private String password;
+    private String name;
 
     @OneToMany
-    private List<Role> roleList;
-
+    private List<Power> powerList;
 }

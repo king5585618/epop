@@ -41,6 +41,7 @@
                 <entry key="javax.persistence.schema-generation.database.action" value="create"/>
                 <entry key="eclipselink.logging.level" value="FINE"/>
                 <entry key="eclipselink.weaving" value="false"/>
+                <entry key="javax.persistence.Cacheable" value="false"/>
             </map>
         </property>
     </bean>

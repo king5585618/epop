@@ -7,10 +7,20 @@
  * 2013-2016. All rights reserved.
  */
 
-package com.huotu.epop.model;
+package com.huotu.epop.model.entity;
+
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by jinzj on 2016/6/8.
+ * Created by jinzj on 2016/6/15.
  */
-public class TEST {
+@Entity
+@Getter
+@Setter
+@Table(name = "Power")
+public class Power {
 }
