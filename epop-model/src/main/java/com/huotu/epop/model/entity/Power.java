@@ -12,8 +12,7 @@ package com.huotu.epop.model.entity;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by jinzj on 2016/6/15.
@@ -23,4 +22,10 @@ import javax.persistence.Table;
 @Setter
 @Table(name = "Power")
 public class Power {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
 }
