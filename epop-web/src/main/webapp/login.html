@@ -7,8 +7,32 @@
   ~ 2013-2016. All rights reserved.
   -->
 
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script type="text/javascript"
+            src="/js/jquery-1.7.2.min.js" th:src="@{/js/jquery-1.7.2.min.js}"></script>
+</head>
 <body>
 <h2>login</h2>
+<a href="javascript:void(0)" onclick="ajaxGet()">aaa</a>
 </body>
+<script>
+    function ajaxGet() {
+        var value = {};
+        value.a = "a";
+        $.ajax({
+            url: 'test2',
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+//            data: {value: JSON.stringify(value)},
+            data: {value: value},
+            success: function () {
+                alert("1111111");
+            }, error: function () {
+            }
+        })
+    }
+
+</script>
 </html>
