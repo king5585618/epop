@@ -10,10 +10,7 @@
 package com.huotu.epop.web;
 
 import com.huotu.epop.service.ServiceConfig;
-import com.huotu.epop.web.config.CoreConfig;
-import com.huotu.epop.web.config.DataSourceConfig;
-import com.huotu.epop.web.config.LoggingConfig;
-import com.huotu.epop.web.config.MVCConfig;
+import com.huotu.epop.web.config.*;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
@@ -24,7 +21,7 @@ public class DispatcherServletInitializer extends AbstractAnnotationConfigDispat
     protected Class<?>[] getRootConfigClasses() {
         return new Class<?>[]{
                 CoreConfig.class, MVCConfig.class, LoggingConfig.class,
-                ServiceConfig.class, DataSourceConfig.class
+                ServiceConfig.class, DataSourceConfig.class, SpringSecurityConfig.class
         };
     }
 
