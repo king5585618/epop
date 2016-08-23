@@ -9,9 +9,7 @@
 
 package com.huotu.epop.web.config;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.access.event.LoggerListener;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -24,7 +22,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @SuppressWarnings("SpringJavaAutowiringInspection")
 @Configuration
 @EnableWebSecurity
-//@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
 //    private final static Log log = LogFactory.getLog(SpringSecurityConfig.class);
@@ -51,32 +48,11 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 //        自带的登录界面
 //        http.authorizeRequests().anyRequest().authenticated().and().formLogin().and().httpBasic();
-//        http.authorizeRequests().anyRequest().authenticated().and().formLogin().loginPage("/login").permitAll();
+        http.authorizeRequests().anyRequest().authenticated().and().formLogin().loginPage("/login").permitAll();
 
 //        没有权限则跳转到异常页
 //        http.authorizeRequests().antMatchers("/**").hasRole("USER").and().exceptionHandling().accessDeniedPage("/login");
 
-    }
-
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.inMemoryAuthentication()
-//                .withUser("user")
-//                .password("password")
-//                .roles("USER");
-//    }
-
-    @Bean
-    public LoggerListener loggerListener(){
-        LoggerListener loggerListener = new LoggerListener();
-        return loggerListener;
-    }
-
-    @Bean
-    public org.springframework.security.authentication.event.LoggerListener eventLoggerListener(){
-        org.springframework.security.authentication.event.LoggerListener loggerListener =
-                new org.springframework.security.authentication.event.LoggerListener();
-        return loggerListener;
     }
 
 }

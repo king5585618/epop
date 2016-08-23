@@ -9,7 +9,6 @@
 
 package com.huotu.epop.web.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -17,7 +16,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -28,16 +26,6 @@ public class TestController {
     private static final Log log = LogFactory.getLog(TestController.class);
 
     private ObjectMapper objectMapper = new ObjectMapper();
-
-    @RequestMapping(value = "/test",method = RequestMethod.GET)
-    public String test() throws JsonProcessingException {
-        log.info("test");
-        Map<String, String> map = new HashMap<>();
-        map.put("1", "1");
-        map.put("2", "2");
-        String value = objectMapper.writeValueAsString(map);
-        return "redirect:/test2?value=" + value;
-    }
 
     @RequestMapping(value = "/test2", method = RequestMethod.GET)
     public String test2(Map value) {
